@@ -1,0 +1,127 @@
+<!-- ngModel can be used only on the form fields -->
+<input type="text" name="fname" [(ngModel)]="fname" > {{fname}}
+<input type="text" name="fname" [(ngModel)]="fname" > {{fname}}
+<!-- <input type="text" name="fname" value="{{fname}}" >  -->
+<!-- <input type="text" name="fname" #firstName > {{fname}} -->
+<!-- <button (click)="checkFname(firstName.value)">click me</button> -->
+<!-- <input type="text" name="fname" [(ngModel)]="firstName.value" > {{fname}} -->
+
+<div *ngIf="fname == 'tech'"> this is if </div>
+<!-- if the condition doest satisfy we will remove the element from the DOM-->
+
+<div [hidden]="fname == 'tech'"> this is hidden </div>
+<!-- if the condition  satisfy we will add a `hidden` attribute to the element, so it will not show in the UI-->
+
+
+<div [ngSwitch]="fname">
+	<p *ngSwitchCase="'angular'"> this is angular</p>
+	<p *ngSwitchCase="'tech'"> this is tech</p>
+	<p *ngSwitchCase="'drys'"> this is drys</p>
+	<p *ngSwitchDefault> this is default</p>
+</div>
+
+<div *ngFor="let item of fruits"> {{item}} </div>
+<h1 *ngFor="let x of fruits"> {{x}} </h1>
+<h1 *ngFor="let y in fruits"> {{y}} </h1>
+
+
+<ol >
+	<li *ngFor="let x of fruits; let i = index"> {{x}} -- {{i}}</li>
+</ol>
+
+<select>
+	<option *ngFor="let x of fruits"> {{x}}</option>
+</select>
+
+<table border="1">
+	<tr *ngFor="let x of fruits;index as i">
+		<td> {{x}} -- {{i}}</td>
+	</tr>
+</table>
+
+<div [title]="fname" class="errror">asdfasdf</div>
+<div title="{{fname}}" class="errror">asdfasdf</div>
+
+<div [ngClass]="{'error': (fname=='err'),'success': (fname=='suc') }"> this is ng class </div>
+
+<div [ngStyle]="{'background-color': (fname=='err')?'red':''}"> this is ng style </div>
+<!-- 
+	submit
+	select
+-->
+
+<p (click)="callMe()">this is click</p>
+
+<p (dblclick)="callMe()">this is dblclick</p>
+
+<p (mouseover)="callMe()">this is over</p>
+
+<p (mouseout)="callMe()">this is out</p>
+
+<p (mouseenter)="callMe()">this is enter</p>
+
+<p (mouseleave)="callMe()">this is leave</p>
+
+<p (mousedown)="callMe()">this is down</p>
+
+<p (mouseup)="callMe()">this is up</p>
+
+<p (mousemove)="callMe()">this is move</p>
+
+<!-- <p (error)="callMe()">this is error</p>
+<p (load)="callMe()">this is load</p>
+<p (online)="callMe()">this is online</p>
+<p (print)="callMe()">this is print</p> -->
+
+<pre>
+<input (focus)="callMe()" placeholder="focus">
+
+<input (blur)="callMe()" placeholder="blur">
+
+<input (change)="callMe()" placeholder="change">
+
+<input (keyup)="callMe()" placeholder="up">
+
+<input (keydown)="evnetCheck($event)" placeholder="down">
+
+<input (keypress)="callMe()" placeholder="press">
+
+<input (copy)="callMe()" placeholder="copy">
+
+<input (paste)="callMe()" placeholder="paste">
+
+<input (cut)="callMe()" placeholder="cut">
+
+<!-- <form (invalid)="callMe()" (valid)="callMe()">
+	<input (input)="callMe()" placeholder="input">
+</form>
+Structural Directives
+*ngFor
+*ngIf
+
+Attribute Directives
+[hidden]
+[ngClass]
+[ngStyle]
+[ngSwitch]
+
+
+Custom Directives**
+[mahesh]
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>

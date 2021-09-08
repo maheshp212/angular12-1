@@ -3,16 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
+import { IntroComponent } from './intro/intro.component';
+import { VariablesComponent } from './variables/variables.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent
+  declarations: [ // components, directives, pipes
+    AppComponent,
+    HomeComponent,
+    IntroComponent,
+    VariablesComponent,
+    DirectivesComponent
   ],
-  imports: [
+  imports: [ //modules
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [], // services
   bootstrap: [AppComponent]
 })
 export class AppModule { }
