@@ -6,9 +6,11 @@
 <!-- <button (click)="checkFname(firstName.value)">click me</button> -->
 <!-- <input type="text" name="fname" [(ngModel)]="firstName.value" > {{fname}} -->
 
-<div *ngIf="fname == 'tech'"> this is if </div>
+<div *ngIf="fname == 'tech' else mahesh"> this is if </div>
 <!-- if the condition doest satisfy we will remove the element from the DOM-->
-
+<ng-template #mahesh>
+	<div>this is else</div> 
+</ng-template>
 <div [hidden]="fname == 'tech'"> this is hidden </div>
 <!-- if the condition  satisfy we will add a `hidden` attribute to the element, so it will not show in the UI-->
 
@@ -20,7 +22,11 @@
 	<p *ngSwitchDefault> this is default</p>
 </div>
 
+<ng-container *ngIf="fname==tech">
 <div *ngFor="let item of fruits"> {{item}} </div>
+</ng-container>
+
+
 <h1 *ngFor="let x of fruits"> {{x}} </h1>
 <h1 *ngFor="let y in fruits"> {{y}} </h1>
 
@@ -33,9 +39,9 @@
 	<option *ngFor="let x of fruits"> {{x}}</option>
 </select>
 
-<table border="1">
-	<tr *ngFor="let x of fruits;index as i">
-		<td> {{x}} -- {{i}}</td>
+<table border="1" >
+	<tr   *ngFor="let x of fruits;index as i" >
+		<td > {{x}} -- {{i}}</td>
 	</tr>
 </table>
 
@@ -98,6 +104,8 @@
 Structural Directives
 *ngFor
 *ngIf
+ng-template
+ng-container
 
 Attribute Directives
 [hidden]

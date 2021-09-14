@@ -14,6 +14,16 @@ export class DirectivesComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    this.fruits.forEach((fruit:string)=>{
+      if(fruit =='melon'){
+        return false;
+      } else {
+        console.log(fruit);
+      }
+      console.log('hello');
+      return true;
+    })
   }
 
   callMe(){
