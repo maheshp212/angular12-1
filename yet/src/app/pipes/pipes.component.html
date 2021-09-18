@@ -1,0 +1,53 @@
+<p>pipes works!</p>
+<pre>
+
+    {{fname}}
+    {{fname | lowercase}}
+    {{fname|uppercase}}
+    {{fname | uppercase | slice:2:5}}
+    <!-- {{fname|number}} -->
+    <!-- {{fname | capitalize}} -->
+
+    {{num}}
+    {{num | number}}
+    {{num | percent}}
+    {{num | currency}}
+    {{num | currency:'INR'}}
+    {{num | currency:'INR '}}
+    {{num | currency:'Yet'}}
+    {{num | currency:'EUR':'symbol':'3.0-5'}}
+    {{num | currency:'Rs.':'symbol':'3.0-5'}}
+    <!--
+        3.2-4
+        3 - like how many decimals we need before .(dot)
+        2- mininum  number of decimals after .(dot)
+        4- maximum  number of decimals after .(dot)
+    -->
+    {{today}}}
+    {{today | date}}
+    {{today | date : 'dd-MM-YYYY'}}
+    {{today | date : 'MM-dd-YY'}}
+    
+    
+    {{user}}
+    {{user | json}}
+
+    <!-- async -->
+
+    {{32 | hexaaaaaaaaaaaaaaaaaaaa}}
+    {{15 | hexaaaaaaaaaaaaaaaaaaaa}}
+    {{255 | hexaaaaaaaaaaaaaaaaaaaa}}
+
+    {{5 | parms:3:2:5:10}}
+    {{5 | parms:3:2}}
+
+    <input type="text" [(ngModel)]="fname">
+    {{383705 | custEmpId:fname:2018}}
+    {{383705 | custEmpId}}
+
+
+    <!--
+        pure pipe -- will trigger when ever the values get chagnged
+        Impure pipe -- will trigger when ever the values get chagnged & life cycle trigger
+    -->
+</pre>
