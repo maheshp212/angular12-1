@@ -14,6 +14,7 @@ import { ParmsPipe } from './parms.pipe';
 import { CustEmpIdPipe } from './cust-emp-id.pipe';
 import { C1Component } from './c1/c1.component';
 import { C2Component } from './c2/c2.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   declarations: [ // components, directives, pipes
@@ -27,7 +28,8 @@ import { C2Component } from './c2/c2.component';
     ParmsPipe,
     CustEmpIdPipe,
     C1Component,
-    C2Component
+    C2Component,
+    UsersComponent
   ],
   imports: [ //modules
     BrowserModule,

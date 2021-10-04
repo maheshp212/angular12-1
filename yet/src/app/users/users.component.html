@@ -1,0 +1,6 @@
+<div class="main-users">
+    <div *ngFor="let user of usersList;let i = index" (click)="select(i)" class="col-3">
+        <div><img src="{{user.img}}"></div>
+        <div><strong>{{user.name}}</strong></div>
+    </div>
+</div>

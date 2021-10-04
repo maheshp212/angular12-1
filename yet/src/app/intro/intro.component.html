@@ -1,11 +1,22 @@
 <p>intro works!</p>
 
 
-<app-c1 [fullName]="'mahesh'"></app-c1>
-<app-c1 [fullName]="'ramesh'"></app-c1>
-<app-c1 [fullName]="'suresh'"></app-c1>
-<app-c1></app-c1>
-<app-c1></app-c1>
+<!-- <app-c1 [fullName]="'mahesh'"></app-c1> -->
+<!-- <app-c1 [fullName]="'ramesh'"></app-c1> -->
+<!-- <app-c1 [fullName]="'suresh'" [age]="32" (sendData)="sendData($event)"></app-c1> -->
+<!-- <app-c1 [fullName]="'mahesh'" [age]="42" (sendData)="sendData($event)"></app-c1> -->
+<!-- <app-c1 [age]="33"></app-c1> -->
+<!-- <app-c1 [age]="34"></app-c1> -->
 
 
-<app-c2></app-c2>
+<!-- <app-c2></app-c2> -->
+<div class="users">
+<div class="colss-6">
+    <h1>Available Users</h1>
+    <users [usersList]="usersList" (selectedIndex)="selectAvailable($event)"></users>
+</div>
+<div class="colss-6">
+    <h1>Selected Users Users</h1>
+    <users [usersList]="selectedUsers" (selectedIndex)="selectSelected($event)"></users>
+</div>
+</div>
